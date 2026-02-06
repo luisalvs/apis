@@ -31,7 +31,7 @@ def get_count():
     ).count()
     
     return jsonify({
-        "count": total
+        "qtde": total
     })
 
 if __name__ == '__main__':
