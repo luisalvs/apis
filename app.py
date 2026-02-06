@@ -23,7 +23,7 @@ class Tokens(db.Model):
     usado = db.Column(db.String(1))
     
 @app.route('/count', methods=['GET'])
-def get_count():
+def get_token():
     tempo = datetime.now() - timedelta(minutes=10)
     total = Tokens.query.filter(
         Tokens.data >= tempo,
