@@ -8,11 +8,11 @@ app = Flask(__name__)
 usuario = "root"
 senha = "Max@Gustavo2025"
 servidor = "95.111.231.72"
-banco = "SISTEMA"
+database = "SISTEMA"
 
 senha_codificada = urllib.parse.quote_plus(senha)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = f'mariadb+mysqlconnector://{usuario}:{senha_codificada}@{servidor}/{banco}'
+app.config['SQLALCHEMY_DATABASE_URI'] = f'mariadb+mysqlconnector://{usuario}:{senha_codificada}@{servidor}/{database}'
 
 db = SQLAlchemy(app)
 
