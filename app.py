@@ -5,10 +5,10 @@ import urllib.parse
 
 app = Flask(__name__)
 
-usuario = "root"
-senha = "Max@Gustavo2025"
-servidor = "95.111.231.72"
-database = "SISTEMA"
+usuario = 'root'
+senha = 'Max@Gustavo2025'
+servidor = '95.111.231.72'
+database = 'SISTEMA'
 
 senha_codificada = urllib.parse.quote_plus(senha)
 
@@ -31,7 +31,7 @@ def get_token():
     ).count()
     
     return jsonify({
-        "qtde": total
+        'qtde': total
     })
 
 if __name__ == '__main__':
