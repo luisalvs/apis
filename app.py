@@ -31,7 +31,7 @@ def get_token():
     ).count()
     
     return jsonify({
-        'qtde': total
+        'total_tokens': total
     })
 
 if __name__ == '__main__':
