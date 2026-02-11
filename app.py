@@ -24,7 +24,7 @@ class Tokens(db.Model):
     
 @app.route('/count', methods=['GET'])
 def get_token():
-    tempo = datetime.now() - timedelta(seconds=90)
+    tempo = datetime.now() - timedelta(minutes=3)
     total = Tokens.query.filter(
         Tokens.data >= tempo,
         Tokens.usado == 'N'
